@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="stylesheet" type="text/css" href="/Users/mac/Documents/M13_AJAYI_DANIEL/Main.css">
+    
+<title>CSS Grid</title>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "ads article"
+    "nav article"
+    "nav footer";
+  grid-template-rows: 80px 120px 1fr 70px;  
+  grid-template-columns: 20% 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }  
+header, footer, article, nav, div {
+  padding: 1.2em;
+  background: yellowgreen;
+  }
+#pageHeader {
+  grid-area: header;
+  }
+#pageFooter {
+  grid-area: footer;
+  }
+#mainArticle { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteAds { 
+  grid-area: ads; 
+  } 
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+    grid-template-columns: 1fr;
+ }
+}
+</style>
+<body>
+  <header id="pageHeader">WebDan - Affordable Web Design for Small Business</header>
+  <article id="mainArticle">At WebDave, we are a web design agency, and our purpose is to unify your message and bring your brand’s excellence to the forefront throughout all communication.
+A company’s website should be the hub of all information and activity so it’s important to keep up to date with contemporary design standards and practices. A great website will drive purchase and is a pivotal tool for prospects when searching for information on a product or service.</article>
+  <nav id="mainNav">
+    <li><a href="#"> Home </a> </li>
+    <li><a href="#"> Services </a> </li>
+    <li><a href="#"> Pricing </a> </li>
+    <li><a href="#"> Contact </a> </li>
+  </nav>
+  <div id="siteAds">Ads</div>
+  <footer id="pageFooter">Copyright © 2020 webdan</footer>
+</body>
